@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Jaan ♡</title>
+<meta name="theme-color" content="#130d18">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+  --bg:#0d0910; --panel:#171019; --panel2:#21151f; --rose:#ef9aae;
+  --rose2:#f8c6d0; --cream:#fff6f1; --muted:#bcaab3; --line:rgba(255,255,255,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:
+  radial-gradient(circle at 15% 10%,rgba(239,154,174,.12),transparent 25%),
+  radial-gradient(circle at 90% 35%,rgba(165,113,150,.10),transparent 30%),
+  var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;overflow-x:hidden;
+}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");z-index:10}
+a{color:inherit;text-decoration:none}
+section{padding:110px 22px;position:relative}
+.container{max-width:1050px;margin:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);font-weight:700}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:500;margin:0}
+h2{font-size:clamp(2.6rem,7vw,5rem);line-height:.95;margin:10px 0 20px}
+p{line-height:1.75;color:var(--muted);font-size:1rem}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:40px 22px;overflow:hidden}
+.hero-inner{max-width:760px;position:relative;z-index:2}
+.hero h1{font-size:clamp(4.5rem,15vw,10rem);line-height:.75;margin:22px 0}
+.hero h1 span{display:block;font-size:.25em;letter-spacing:.18em;text-transform:uppercase;color:var(--rose2);line-height:1.2;margin-top:28px}
+.hero p{max-width:500px;margin:25px auto 34px}
+.btn{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(239,154,174,.45);background:rgba(239,154,174,.11);color:var(--cream);padding:14px 22px;border-radius:999px;cursor:pointer;font:inherit;transition:.25s}
+.btn:hover{transform:translateY(-2px);background:rgba(239,154,174,.2)}
+.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.2em;color:var(--muted)}
+.star{position:absolute;width:4px;height:4px;background:var(--rose2);border-radius:50%;opacity:.6;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{50%{opacity:.1;transform:scale(.5)}}
+.reveal{opacity:0;transform:translateY(25px);transition:1s ease}.reveal.show{opacity:1;transform:none}
+
+.timeline{border-left:1px solid rgba(239,154,174,.35);margin:50px 0 0 15px;padding-left:35px}
+.titem{position:relative;margin:0 0 55px}.titem:before{content:"";position:absolute;width:10px;height:10px;border:2px solid var(--rose);background:var(--bg);border-radius:50%;left:-42px;top:8px}
+.date{color:var(--rose);font-size:.8rem;letter-spacing:.12em;font-weight:700;margin-bottom:8px}
+
+.case{background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(239,154,174,.06));border:1px solid var(--line);border-radius:26px;padding:35px;overflow:hidden;position:relative}
+.case:after{content:"CLASSIFIED";position:absolute;right:-20px;top:25px;transform:rotate(18deg);font-size:4rem;font-weight:700;color:rgba(239,154,174,.035)}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.evidence{background:#0e0a10;border:1px dashed rgba(239,154,174,.35);border-radius:18px;padding:24px}
+.td-box{display:flex;justify-content:space-between;align-items:center;margin:25px 0}
+.td{font-family:"Cormorant Garamond";font-size:4rem;color:var(--rose2);transition:1.2s}
+.td.left{transform:translateX(0)}.td.right{transform:translateX(0)}
+.reconstruct .left{transform:translateX(70px)}.reconstruct .right{transform:translateX(-70px)}
+.verdict{border-top:1px solid var(--line);padding-top:20px;margin-top:25px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}
+.love-card{min-height:210px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:25px;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+.love-card:hover{transform:translateY(-5px);border-color:rgba(239,154,174,.4)}
+.love-card .num{color:var(--rose);font-size:.7rem;letter-spacing:.15em}
+.love-card h3{font-size:2rem;margin:25px 0 10px}.love-card p{display:none;margin:0}.love-card.open p{display:block}.love-card.open h3{margin:15px 0 8px}
+
+.song{margin-top:40px;display:grid;grid-template-columns:1fr 1.4fr;gap:25px;align-items:stretch}
+.album{min-height:330px;border-radius:28px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;background:
+radial-gradient(circle at 70% 25%,rgba(248,198,208,.25),transparent 22%),
+linear-gradient(145deg,#5b2c45,#19101b 70%);position:relative;overflow:hidden}
+.album:before{content:"♡";font-family:serif;font-size:15rem;position:absolute;right:-10px;top:-65px;color:rgba(255,255,255,.055)}
+.album small{letter-spacing:.2em;text-transform:uppercase;color:#e9c9d1}
+.album strong{font-family:"Cormorant Garamond";font-size:2.8rem;font-weight:500}
+.player{background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:35px;display:flex;flex-direction:column;justify-content:center}
+.player h3{font-size:2.6rem}.player .artist{color:var(--rose);margin-top:5px}
+.progress{height:4px;background:#3a2934;border-radius:4px;margin:35px 0 12px;overflow:hidden}.progress i{display:block;width:34%;height:100%;background:var(--rose)}
+.controls{display:flex;align-items:center;gap:15px}.play{width:55px;height:55px;border-radius:50%;border:0;background:var(--rose);color:#23131b;font-size:1.1rem;cursor:pointer}
+
+.final{text-align:center;padding-bottom:140px}.final h2{max-width:850px;margin:15px auto 25px}.signature{font-family:"Cormorant Garamond";font-size:2rem;color:var(--rose2);margin-top:25px}
+.date-lock{margin-top:35px;font-size:.75rem;letter-spacing:.35em;color:var(--muted)}
+.heart{position:fixed;pointer-events:none;font-size:18px;animation:float 3.5s linear forwards;z-index:20}
+@keyframes float{to{transform:translateY(-120vh) rotate(25deg);opacity:0}}
+
+.secret{
+position:fixed;right:12px;bottom:10px;width:26px;height:26px;border-radius:50%;
+opacity:.04;border:1px solid var(--rose);cursor:pointer;z-index:30;background:transparent
+}
+.secret:hover{opacity:.25}
+.modal{position:fixed;inset:0;background:rgba(5,3,7,.85);backdrop-filter:blur(10px);display:none;place-items:center;padding:22px;z-index:40}
+.modal.open{display:grid}.modal-box{max-width:560px;background:var(--panel2);border:1px solid rgba(239,154,174,.3);border-radius:28px;padding:38px;text-align:center;box-shadow:0 30px 100px #000}
+.modal-box h2{font-size:3.5rem}.close{margin-top:25px}
+
+
+.td-flirty{
+  position:absolute;top:50%;font-family:"Cormorant Garamond",serif;
+  font-size:clamp(4.5rem,14vw,7rem);line-height:1;color:var(--rose2);
+  transform:translateY(-50%);transition:all 1.05s cubic-bezier(.2,.8,.2,1);
+  text-shadow:0 0 35px rgba(239,154,174,.18);z-index:2
+}
+.td-flirty.left{left:calc(50% - 42px)}
+.td-flirty.right{right:calc(50% - 42px)}
+.td-stage.moved .td-flirty.left{left:5%}
+.td-stage.moved .td-flirty.right{right:5%}
+.td-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.2)}
+
+@media(max-width:700px){
+section{padding:80px 18px}.case{padding:25px}.case-grid,.song{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}
+.love-card{min-height:175px;padding:20px}.love-card h3{font-size:1.65rem}.hero h1{font-size:clamp(4rem,22vw,7rem)}
+}
+@media(max-width:430px){.cards{grid-template-columns:1fr}.love-card{min-height:150px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner reveal show">
+    <div class="eyebrow">A tiny corner of the internet</div>
+    <h1>For my Jaan<span>Savant QTπ → Jaan</span></h1>
+    <p>Made with love, questionable amounts of feelings, and probably a slightly unnecessary amount of HTML.</p>
+    <a class="btn" href="#story">Come here ♡</a>
+  </div>
+  <div class="scroll">SCROLL ↓</div>
+</header>
+
+<main>
+<section id="story">
+<div class="container reveal">
+<div class="eyebrow">01 — Our beginning</div>
+<h2>Somehow, it became us.</h2>
+<p>It started somewhere between NASA India, two people sitting next to each other, and one very questionable joke.</p>
+<div class="timeline">
+  <div class="titem"><div class="date">24 MAY 2023</div><h3>The beginning</h3><p>NASA India. One meeting. Two people. And, without either of us knowing it yet, the beginning of something that would become very important.</p></div>
+  <div class="titem"><div class="date">THEN</div><h3>And then there was the TD incident.</h3><p>Because apparently a perfectly normal meeting needed an inside joke that would survive far beyond the meeting itself.</p></div>
+  <div class="titem"><div class="date">NOW</div><h3>Here we are.</h3><p>Still laughing. Still making memories. Still somehow finding new reasons to choose each other.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container reveal">
+<div class="eyebrow">02 — Exhibit A</div>
+<h2>The infamous TD moment.</h2>
+<div class="case" id="tdCase">
+  <div class="eyebrow">NASA INDIA · 24.05.23</div>
+  <p style="font-family:'Cormorant Garamond';font-size:1.65rem;color:var(--cream);margin-bottom:5px">
+    You know exactly what this means. 😏
+  </p>
+  <p>Some things really do look better when they're on opposite sides.</p>
+
+  <div class="td-stage" id="tdStage" style="height:220px;position:relative;overflow:hidden;border-radius:20px;background:#0e0a10;border:1px dashed rgba(239,154,174,.3);margin:28px 0;">
+    <span class="td-flirty left" id="tdLeft">TD</span>
+    <span class="td-flirty right" id="tdRight">TD</span>
+    <div class="td-hint">tap the button 👀</div>
+  </div>
+
+  <button class="btn" id="reconstruct">Move them apart →</button>
+  <p id="tdCaption" style="font-size:.85rem;margin:18px 0 0;color:var(--rose2)">
+    Innocent little letters. Absolutely no double meaning here.
+  </p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container reveal">
+<div class="eyebrow">03 — Things I adore about you</div>
+<h2>Six reasons. Obviously not the only six.</h2>
+<div class="cards">
+  <div class="love-card"><div class="num">01</div><h3>Your humour</h3><p>Because making me laugh is apparently one of your full-time responsibilities.</p></div>
+  <div class="love-card"><div class="num">02</div><h3>Your attitude</h3><p>There is just something about the way you carry yourself that I absolutely love.</p></div>
+  <div class="love-card"><div class="num">03</div><h3>Your confidence</h3><p>You know who you are. And I love that about you.</p></div>
+  <div class="love-card"><div class="num">04</div><h3>That beard</h3><p>Yes. This gets its own card. I have made peace with this fact.</p></div>
+  <div class="love-card"><div class="num">05</div><h3>Your smile</h3><p>One of my favourite things to see. Especially when I know I caused it.</p></div>
+  <div class="love-card"><div class="num">06</div><h3>Your touch</h3><p>Some things are better felt than explained. ❤️</p></div>
+</div>
+<p style="margin-top:25px;font-size:.85rem">Tap a card. I promise I have a justification.</p>
+</div>
+</section>
+
+<section>
+<div class="container reveal">
+<div class="eyebrow">04 — Our soundtrack</div>
+<h2>This one is ours.</h2>
+<div class="song">
+  <div class="album"><small>Our song</small><strong>Love Me<br>Like You Do</strong><span style="margin-top:8px;color:#d8b9c3">Ellie Goulding</span></div>
+  <div class="player">
+    <div class="eyebrow">A little bit of us</div>
+    <h3>Love Me Like You Do</h3><div class="artist">Ellie Goulding · Fifty Shades of Grey</div>
+    <div class="progress"><i></i></div><div style="display:flex;justify-content:space-between;color:var(--muted);font-size:.75rem"><span>♡</span><span>♡</span></div>
+    <div class="controls"><button class="play" id="musicBtn">▶</button><span id="musicText">Press play for the dramatic version.</span></div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="final">
+<div class="container reveal">
+<div class="eyebrow">05 — For you</div>
+<h2>Somehow, a meeting at NASA India turned into us.</h2>
+<p style="max-width:650px;margin:auto">And I'm really, really glad it did.</p>
+<p style="max-width:650px;margin:22px auto 0">Thank you for your humour, your confidence, your smile, your touch, your ridiculous jokes, and all the little things that make you you.</p>
+<div class="signature">Happy Boyfriend's Day, Jaan. ❤️<br><span style="font-size:1.5rem">— Savant QTπ</span></div>
+<div class="date-lock">24 · 05 · 2023</div>
+</div>
+</section>
+</main>
+
+<button class="secret" id="secret" aria-label="secret"></button>
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <div class="eyebrow">YOU FOUND IT.</div>
+    <h2>THE SECRET TD FILE.</h2>
+    <p>Congratulations, Jaan. You have successfully discovered the most unnecessary secret on this entire website.</p>
+    <p style="color:var(--rose2);font-family:'Cormorant Garamond';font-size:1.8rem">One TD here.<br>One TD there.<br>And somehow… one whole love story.</p>
+    <button class="btn close" id="close">Okay, Savant QTπ. 😂</button>
+  </div>
+</div>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+reveals.forEach(x=>obs.observe(x));
+
+document.querySelectorAll('.love-card').forEach(card=>card.addEventListener('click',()=>card.classList.toggle('open')));
+
+const reconstruct=document.getElementById('reconstruct');
+const tdStage=document.getElementById('tdStage');
+const tdCaption=document.getElementById('tdCaption');
+let tdMoved=false;
+reconstruct.addEventListener('click',()=>{
+ tdMoved=!tdMoved;
+ tdStage.classList.toggle('moved',tdMoved);
+ reconstruct.textContent=tdMoved?'Bring them back ↶':'Move them apart →';
+ tdCaption.textContent=tdMoved
+   ? 'Yep. Exactly where your mind went. 😏'
+   : 'Innocent little letters. Absolutely no double meaning here.';
+ if(tdMoved) burst(5);
+});
+
+const modal=document.getElementById('modal');
+document.getElementById('secret').addEventListener('click',()=>{
+ modal.classList.add('open'); burst(18);
+});
+document.getElementById('close').addEventListener('click',()=>modal.classList.remove('open'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+
+function burst(n=12){
+ for(let i=0;i<n;i++){
+   const h=document.createElement('div');h.className='heart';h.textContent=['♡','♥','✦'][Math.floor(Math.random()*3)];
+   h.style.left=(10+Math.random()*80)+'vw';h.style.bottom='-20px';h.style.color='rgba(248,198,208,.9)';
+   h.style.animationDelay=(Math.random()*.6)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),4200);
+ }
+}
+document.querySelector('.hero .btn').addEventListener('click',()=>setTimeout(()=>burst(8),400));
+
+let playing=false;
+document.getElementById('musicBtn').addEventListener('click',function(){
+ playing=!playing;this.textContent=playing?'Ⅱ':'▶';
+ document.getElementById('musicText').textContent=playing?'Okay, imagine the music. Dramatically.':'Press play for the dramatic version.';
+ if(playing) burst(5);
+});
+
+for(let i=0;i<28;i++){
+ const s=document.createElement('span');s.className='star';
+ s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';
+ s.style.animationDelay=Math.random()*3+'s';document.body.appendChild(s);
+}
+</script>
+</body>
+</html>
